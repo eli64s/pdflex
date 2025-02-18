@@ -12,7 +12,7 @@ import warnings
 from pathlib import Path
 from typing import List
 
-from pypdf import PdfMerger
+from pypdf import PdfWriter
 from reportlab.lib.pagesizes import landscape as rl_landscape
 
 # Import ReportLab modules to generate the separator page.
@@ -87,7 +87,7 @@ def merge_pdfs(pdf_paths: List[str], output_path: str, landscape: bool = False) 
     Exception
         If an error occurs during merging or writing the output PDF.
     """
-    merger = PdfMerger()
+    merger = PdfWriter()
 
     for pdf_path in pdf_paths:
         pdf_path = pdf_path.strip()
