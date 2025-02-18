@@ -1,70 +1,11 @@
 <div id="top" align="left">
 
 <!-- HEADER -->
-<!-- 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/eli64s/pdflex/ed2534164a2f7f2a7b4aafef998127791b205f30/docs/assets/logo-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/eli64s/pdflex/ed2534164a2f7f2a7b4aafef998127791b205f30/docs/assets/logo-light.svg">
-  <img alt="pdflex Logo" src="https://raw.githubusercontent.com/eli64s/pdflex/ed2534164a2f7f2a7b4aafef998127791b205f30/docs/assets/logo-light.svg" width="900" style="max-width: 100%;">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/eli64s/pdflex/d545ac98f5ad59ece892e638a7d3bdee593d8e88/docs/assets/logo-left.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/eli64s/pdflex/d545ac98f5ad59ece892e638a7d3bdee593d8e88/docs/assets/logo-left.svg">
+  <img alt="pdflex Logo" src="https://raw.githubusercontent.com/eli64s/pdflex/d545ac98f5ad59ece892e638a7d3bdee593d8e88/docs/assets/logo-left.svg" width="100%" style="max-width: 100%;">
 </picture>
--->
-
-<div>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 240">
-      <!-- Gradients -->
-      <defs>
-          <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="33%" style="stop-color: #FF1493" />
-              <stop offset="67%" style="stop-color: #00F5FF" />
-              <stop offset="100%" style="stop-color: #4B0082" />
-          </linearGradient>
-          <!-- Background pattern -->
-          <pattern id="gridPattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-              <rect width="20" height="20" fill="none" />
-              <circle cx="10" cy="10" r="1" fill="#E2E8F0" opacity="0.2" />
-          </pattern>
-      </defs>
-      <!-- Background -->
-      <rect width="100%" height="100%" fill="white" />
-      <rect width="100%" height="100%" fill="url(#gridPattern)" />
-      <!-- Main Text Group - Moved to left edge -->
-      <g transform="translate(20, 120)">
-          <!-- PDF Text -->
-          <text x="0" y="0" font-family="Arial, sans-serif" font-size="84" font-weight="bold" fill="url(#textGradient)">
-            <tspan>PDFlex</tspan>
-            <!-- <tspan fill="#7934C5">FLEX</tspan> -->
-          </text>
-          <!-- Animated underline -->
-          <rect x="0" y="10" width="360" height="4" fill="url(#textGradient)">
-              <animate attributeName="width" values="0;360;360" dur="1.5s" begin="0s" fill="freeze" />
-          </rect>
-      </g>
-      <!-- Tagline - Aligned with text -->
-      <text x="20" y="164" font-family="Arial, sans-serif" font-size="22" fill="#7934C5" opacity="0.8">
-          Python tools for PDF automation
-      </text>
-      <!-- Sub tagline - Aligned with text -->
-      <text x="20" y="190" font-family="Arial, sans-serif" font-size="16" fill="#7934C5" opacity="0.6">
-          Convert | Extract | Merge | Transform
-      </text>
-      <!-- Decorative Elements - Adjusted position -->
-      <g transform="translate(440, 100)">
-          <!-- Stylized document icon -->
-          <path d="M20,0 L50,0 L70,20 L70,90 L20,90 Z" fill="none" stroke="url(#textGradient)" stroke-width="2">
-              <animate attributeName="stroke-dasharray" from="200" to="0" dur="2s" fill="freeze" />
-          </path>
-          <path d="M50,0 L50,20 L70,20" fill="none" stroke="url(#textGradient)" stroke-width="2" />
-      </g>
-  </svg>
-</div>
-
-<!-- <h3 align="left">
-  Powerful Tools for Modern Documentation
-</h3>
-
-<p align="left">
-  <em>A powerful toolkit for transforming, validating, and managing your Markdown documentation.</em>
-</p> -->
 
 <!-- BADGES -->
 <div align="left">
@@ -88,16 +29,7 @@
 </div>
 
 <div align="left">
-<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="4">
-    <defs>
-        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="33%" style="stop-color: #FF1493" />
-            <stop offset="67%" style="stop-color:#00F5FF" />
-            <stop offset="100%" style="stop-color:#4B0082" />
-        </linearGradient>
-    </defs>
-    <rect width="100%" height="2.5" fill="url(#grad1)" />
-</svg>
+  <img src="https://raw.githubusercontent.com/eli64s/pdflex/d545ac98f5ad59ece892e638a7d3bdee593d8e88/docs/assets/line.svg" alt="thematic-break" width="100%" height="2px" style="margin: 20px 0;">
 </div>
 
 </div>
@@ -307,16 +239,7 @@ Copyright (c) 2020 to present [PDFlex][pdflex] and contributors.
 </div>
 
 <div align="left">
-<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="4">
-    <defs>
-        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="33%" style="stop-color: #FF1493" />
-            <stop offset="67%" style="stop-color:#00F5FF" />
-            <stop offset="100%" style="stop-color:#4B0082" />
-        </linearGradient>
-    </defs>
-    <rect width="100%" height="2.5" fill="url(#grad1)" />
-</svg>
+  <img src="https://raw.githubusercontent.com/eli64s/pdflex/d545ac98f5ad59ece892e638a7d3bdee593d8e88/docs/assets/line.svg" alt="thematic-break" />
 </div>
 
 <!-- <div align="center">

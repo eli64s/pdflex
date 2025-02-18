@@ -27,8 +27,6 @@ from .merge import merge_pdfs
 from .search import search_numeric_prefixed_pdfs, search_pdfs
 from .slides_to_text import extract_text_from_pdf, process_directory
 
-__version__ = version("pdflex")
-
 __all__ = [
     "ExtractionError",
     "PDFlexError",
@@ -40,3 +38,10 @@ __all__ = [
     "search_numeric_prefixed_pdfs",
     "search_pdfs",
 ]
+
+try:
+    from importlib.metadata import version
+
+    __version__ = version("pdflex")
+except ImportError:
+    __version__ = "0.1.0"
