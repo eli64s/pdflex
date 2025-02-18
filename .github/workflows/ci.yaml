@@ -8,7 +8,6 @@ on:
     branches: [ "main" ]
   workflow_dispatch:
 
-
 env:
   UV_CACHE_DIR: ${{ github.workspace }}/.cache/uv
 
@@ -16,40 +15,39 @@ jobs:
   test:
     name: Test Python ${{ matrix.python-version }}
     runs-on: ubuntu-latest
-
     strategy:
       fail-fast: false
       matrix:
         python-version: [ "3.10", "3.11", "3.12" ]
-
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
+        run: |
+          git clone https://github.com/${{ github.repository }}.git .
+          git checkout ${{ github.sha }}
+          
+      - name: Set up Python environment
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y python${{ matrix.python-version }} python${{ matrix.python-version }}-venv
+          python${{ matrix.python-version }} -m venv .venv
+          source .venv/bin/activate
+          
       - name: Install uv
-        uses: astral-sh/setup-uv@v4
-        with:
-          enable-cache: true
-          cache-dependency-glob: "pyproject.toml"
-
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v5
-        with:
-          python-version: ${{ matrix.python-version }}
-          python-version-file: pyproject.toml
-
+        run: |
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+          
       - name: Install dependencies
         run: |
+          source .venv/bin/activate
           uv sync --all-extras --group test
-
+          
       - name: Create report directories
         run: |
           mkdir -p tests/.reports
-
+          
       - name: Run tests with coverage
         run: |
+          source .venv/bin/activate
           uv run pytest \
             -vv \
             --tb=short \
@@ -61,7 +59,7 @@ jobs:
             --cov-report=json:tests/.reports/coverage.json \
             --asyncio-mode=auto \
             --numprocesses=auto
-
+            
       - name: Verify coverage report
         run: |
           ls -la tests/.reports/coverage.json
@@ -69,47 +67,45 @@ jobs:
           echo "Coverage report content preview:"
           head -n 20 tests/.reports/coverage.json
         continue-on-error: true
-
-      - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@v5
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          files: tests/.reports/coverage.json
-          flags: unittests-${{ matrix.python-version }}
-          name: Python ${{ matrix.python-version }}
-          fail_ci_if_error: true
-          directory: tests/.reports
-          verbose: true
+        
+      - name: Upload coverage data
+        run: |
+          curl -Os https://uploader.codecov.io/latest/linux/codecov
+          chmod +x codecov
+          ./codecov -t ${{ secrets.CODECOV_TOKEN }} -f tests/.reports/coverage.json -F unittests-${{ matrix.python-version }}
 
   build:
     name: Build Package
     runs-on: ubuntu-latest
     if: success() && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
-
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Install uv
-        uses: astral-sh/setup-uv@v4
-        with:
-          enable-cache: true
-
+        run: |
+          git clone https://github.com/${{ github.repository }}.git .
+          git checkout ${{ github.sha }}
+          
       - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version-file: pyproject.toml
-
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y python3-venv
+          python3 -m venv .venv
+          source .venv/bin/activate
+          
+      - name: Install build tools
+        run: |
+          source .venv/bin/activate
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+          uv pip install --system build hatch
+          
       - name: Build package
         run: |
-          uv pip install --system build hatch
+          source .venv/bin/activate
           hatch build
-
-      - name: Store build artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: dist
-          path: dist/
+          
+      - name: Save artifacts
+        run: |
+          mkdir -p ${GITHUB_WORKSPACE}/artifacts
+          cp -r dist/* ${GITHUB_WORKSPACE}/artifacts/
 
   deploy:
     name: Deploy to PyPI
@@ -121,13 +117,15 @@ jobs:
       url: https://pypi.org/p/pdflex
     permissions:
       id-token: write
-
     steps:
-      - name: Download dist artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: dist
-          path: dist/
-
-      - name: Publish to PyPI
-        uses: pypa/gh-action-pypi-publish@release/v1
+      - name: Download artifacts
+        run: |
+          mkdir -p dist
+          cp -r ${GITHUB_WORKSPACE}/artifacts/* dist/
+          
+      - name: Upload to PyPI
+        run: |
+          pip install --user twine
+          python -m twine upload --repository pypi dist/* \
+            --username __token__ \
+            --password ${{ secrets.PYPI_TOKEN }}
