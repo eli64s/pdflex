@@ -15,7 +15,6 @@ env:
 jobs:
   build:
     name: Build Package
-    # needs: test
     runs-on: ubuntu-latest
     if: success() && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
 
@@ -46,7 +45,7 @@ jobs:
 
   deploy:
     name: Deploy to PyPI
-    needs: build
+    needs: [ build ]
     runs-on: ubuntu-latest
     if: success() && startsWith(github.ref, 'refs/tags/v')
     environment:
