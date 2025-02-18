@@ -24,7 +24,6 @@ from .exceptions import (
 )
 from .merge import merge_pdfs
 from .search import search_numeric_prefixed_pdfs, search_pdfs
-from .slides_to_text import extract_text_from_pdf, process_directory
 
 __version__ = version("pdflex")
 
@@ -33,9 +32,7 @@ __all__ = [
     "PDFlexError",
     "ReplacementError",
     "ValidationError",
-    "extract_text_from_pdf",
     "merge_pdfs",
-    "process_directory",
     "search_numeric_prefixed_pdfs",
     "search_pdfs",
 ]

@@ -1,6 +1,6 @@
 [project]
 name = "pdflex"
-version = "0.1.6"
+version = "0.1.7"
 description = "Python tools for PDF automation."
 dynamic = ["readme"]
 keywords = [
@@ -61,10 +61,10 @@ classifiers = [
 dependencies = [
     "pydantic-settings",
     "pydantic",
+    "pymupdf",
+    "pypdf",
     "reportlab",
     "rich",
-    "pymupdf>=1.25.3",
-    "pypdf>=5.3.0",
 ]
 
 optional-dependencies.docs = [
