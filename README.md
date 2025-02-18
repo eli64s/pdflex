@@ -2,9 +2,9 @@
 
 <!-- HEADER -->
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/eli64s/pdflex/d545ac98f5ad59ece892e638a7d3bdee593d8e88/docs/assets/logo-left.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/eli64s/pdflex/d545ac98f5ad59ece892e638a7d3bdee593d8e88/docs/assets/logo-left.svg">
-  <img alt="pdflex Logo" src="https://raw.githubusercontent.com/eli64s/pdflex/d545ac98f5ad59ece892e638a7d3bdee593d8e88/docs/assets/logo-left.svg" width="100%" style="max-width: 100%;">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/eli64s/pdflex/1ecee046e6fe585309371b6df12e78845881d3de/docs/assets/logo-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/eli64s/pdflex/1ecee046e6fe585309371b6df12e78845881d3de/docs/assets/logo-light.svg">
+  <img alt="pdflex Logo" src="https://raw.githubusercontent.com/eli64s/pdflex/1ecee046e6fe585309371b6df12e78845881d3de/docs/assets/logo-light.svg" width="100%" style="max-width: 100%;">
 </picture>
 
 <!-- BADGES -->
@@ -239,12 +239,8 @@ Copyright (c) 2020 to present [PDFlex][pdflex] and contributors.
 </div>
 
 <div align="left">
-  <img src="https://raw.githubusercontent.com/eli64s/pdflex/d545ac98f5ad59ece892e638a7d3bdee593d8e88/docs/assets/line.svg" alt="thematic-break" />
+  <img src="https://raw.githubusercontent.com/eli64s/pdflex/d545ac98f5ad59ece892e638a7d3bdee593d8e88/docs/assets/line.svg" alt="thematic-break" width="100%" height="2px" style="margin: 20px 0;">
 </div>
-
-<!-- <div align="center">
-  <img src="https://raw.githubusercontent.com/eli64s/pdflex/216a92894e6f30c707a214fad5a5fba417e3bc39/docs/assets/line.svg" alt="separator" width="100%" height="2px" style="margin: 20px 0;">
-</div> -->
 
 <!-- REFERENCE LINKS -->
 

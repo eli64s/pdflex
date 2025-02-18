@@ -20,35 +20,26 @@ jobs:
       matrix:
         python-version: [ "3.10", "3.11", "3.12" ]
     steps:
-      - name: Checkout repository
+      - name: Initialize Python
         run: |
           git clone https://github.com/${{ github.repository }}.git .
           git checkout ${{ github.sha }}
-          
-      - name: Set up Python environment
-        run: |
           sudo apt-get update
-          sudo apt-get install -y python${{ matrix.python-version }} python${{ matrix.python-version }}-venv
-          python${{ matrix.python-version }} -m venv .venv
-          source .venv/bin/activate
-          
-      - name: Install uv
+          sudo apt-get install -y python3-full python3-venv python3-pip
+          python3 -m venv .venv
+          .venv/bin/pip install --upgrade pip
+
+      - name: Setup environment
         run: |
           curl -LsSf https://astral.sh/uv/install.sh | sh
-          
-      - name: Install dependencies
-        run: |
-          source .venv/bin/activate
-          uv sync --all-extras --group test
-          
-      - name: Create report directories
+          export PATH="/root/.cargo/bin:$PATH"
+          .venv/bin/pip install uv
+          .venv/bin/uv sync --all-extras --group test
+
+      - name: Run tests
         run: |
           mkdir -p tests/.reports
-          
-      - name: Run tests with coverage
-        run: |
-          source .venv/bin/activate
-          uv run pytest \
+          .venv/bin/uv run pytest \
             -vv \
             --tb=short \
             --durations=5 \
@@ -59,57 +50,44 @@ jobs:
             --cov-report=json:tests/.reports/coverage.json \
             --asyncio-mode=auto \
             --numprocesses=auto
-            
-      - name: Verify coverage report
-        run: |
-          ls -la tests/.reports/coverage.json
-          echo "Coverage report size: $(stat -f%z tests/.reports/coverage.json)"
-          echo "Coverage report content preview:"
-          head -n 20 tests/.reports/coverage.json
-        continue-on-error: true
-        
-      - name: Upload coverage data
+
+      - name: Upload coverage
         run: |
           curl -Os https://uploader.codecov.io/latest/linux/codecov
           chmod +x codecov
-          ./codecov -t ${{ secrets.CODECOV_TOKEN }} -f tests/.reports/coverage.json -F unittests-${{ matrix.python-version }}
+          ./codecov -t ${{ secrets.CODECOV_TOKEN }} -f tests/.reports/coverage.json
 
   build:
     name: Build Package
+    needs: test
     runs-on: ubuntu-latest
     if: success() && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
     steps:
-      - name: Checkout repository
+      - name: Initialize environment
         run: |
           git clone https://github.com/${{ github.repository }}.git .
           git checkout ${{ github.sha }}
-          
-      - name: Set up Python
-        run: |
           sudo apt-get update
-          sudo apt-get install -y python3-venv
+          sudo apt-get install -y python3-full python3-venv python3-pip
           python3 -m venv .venv
-          source .venv/bin/activate
-          
-      - name: Install build tools
-        run: |
-          source .venv/bin/activate
+          .venv/bin/pip install --upgrade pip
           curl -LsSf https://astral.sh/uv/install.sh | sh
-          uv pip install --system build hatch
-          
+          export PATH="/root/.cargo/bin:$PATH"
+          .venv/bin/pip install uv
+
       - name: Build package
         run: |
-          source .venv/bin/activate
-          hatch build
-          
-      - name: Save artifacts
+          .venv/bin/uv pip install --system build hatch
+          .venv/bin/hatch build
+
+      - name: Store artifacts
         run: |
           mkdir -p ${GITHUB_WORKSPACE}/artifacts
           cp -r dist/* ${GITHUB_WORKSPACE}/artifacts/
 
   deploy:
     name: Deploy to PyPI
-    needs: [ build ]
+    needs: build
     runs-on: ubuntu-latest
     if: success() && startsWith(github.ref, 'refs/tags/v')
     environment:
@@ -118,14 +96,16 @@ jobs:
     permissions:
       id-token: write
     steps:
-      - name: Download artifacts
+      - name: Setup deployment
         run: |
           mkdir -p dist
           cp -r ${GITHUB_WORKSPACE}/artifacts/* dist/
-          
-      - name: Upload to PyPI
+
+      - name: Deploy to PyPI
         run: |
-          pip install --user twine
-          python -m twine upload --repository pypi dist/* \
+          python3 -m venv .venv
+          .venv/bin/pip install --upgrade pip
+          .venv/bin/pip install twine
+          .venv/bin/python -m twine upload --repository pypi dist/* \
             --username __token__ \
             --password ${{ secrets.PYPI_TOKEN }}
