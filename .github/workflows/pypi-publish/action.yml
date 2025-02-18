@@ -1,0 +1,17 @@
+name: 'Publish to PyPI'
+description: 'Publishes Python packages to PyPI'
+inputs:
+  packages-dir:
+    description: 'Directory containing the packages to publish'
+    required: true
+    default: 'dist/'
+runs:
+  using: "composite"
+  steps:
+    - run: |
+        pip install twine
+        twine upload ${{ inputs.packages-dir }}/*
+      shell: bash
+      env:
+        TWINE_USERNAME: __token__
+        TWINE_PASSWORD: ${{ secrets.PYPI_TOKEN }}
