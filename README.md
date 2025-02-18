@@ -118,7 +118,7 @@ Search for PDF files in a directory based on filename filters (or search for lec
   pdflex search /path/to/search -o merged_output.pdf --prefix "Chapter" --suffix ".pdf"
   ```
 
-- **Lecture Slides Merge:**  
+- **Lecture Slides Merge:**
   (Merges all PDFs whose filenames start with a numeric float prefix like `1.2_`, `3.2_`, etc., in sorted order. Separator pages will be in landscape orientation.)
 
   ```bash
@@ -159,7 +159,7 @@ lecture_slides = search_numeric_prefixed_pdfs("/path/to/algorithms-and-computati
 print("Found lecture slides:", lecture_slides)
 ```
 
-<!-- 
+<!--
 #### Extracting Text from a PDF
 
 ```python
@@ -191,16 +191,16 @@ For detailed API documentation, please refer to the [API Reference](https://pdfl
 
 ### Modules Overview
 
-- **`pdflex.merge`**  
+- **`pdflex.merge`**
   Contains functions to merge PDFs, insert separator pages (with customizable orientation and title cleaning), and write the final merged document.
 
-- **`pdflex.search`**  
+- **`pdflex.search`**
   Provides functions to recursively search for PDFs in a directory based on filename patterns, including numeric float prefixes for lecture slides.
 
-- **`pdflex.extract`** (and similar)  
+- **`pdflex.extract`** (and similar)
   Functions for extracting text using PyMuPDF or PyPDF, validating PDF files, and processing directories of PDFs.
 
-- **`pdflex.cli`**  
+- **`pdflex.cli`**
   Command-line interface that exposes the `merge` and `search` commands, complete with rich console output.
 -->
 

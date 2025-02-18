@@ -14,22 +14,22 @@ jobs:
     permissions:
       contents: write
     environment: pypi
-    
+
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          
+
       - name: Configure Git
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          
+
       - name: Update version
         run: |
           VERSION=${{ inputs.version }}
           sed -i "s/__version__ = .*/__version__ = \"$VERSION\"/" src/pdflex/__init__.py
-          
+
       - name: Commit and tag
         run: |
           git add src/pdflex/__init__.py

@@ -22,21 +22,21 @@ jobs:
           - "3.11"
           - "3.12"
           - "3.13"
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      
+
       - name: Install uv
         uses: astral-sh/setup-uv@v5
         with:
           python-version: ${{ matrix.python-version }}
           enable-cache: true
           cache-dependency-glob: "uv.lock"
-          
+
       - name: Install dependencies
         run: uv sync --all-extras --group test
-          
+
       - name: Run tests
         run: |
           mkdir -p tests/.reports
@@ -45,7 +45,7 @@ jobs:
             --cov=src/pdflex \
             --cov-report=xml \
             --cov-report=term
-            
+
       - name: Upload coverage
         uses: codecov/codecov-action@v4
         with:
@@ -60,20 +60,20 @@ jobs:
       id-token: write
       contents: write
     if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/v'))
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      
+
       - name: Install uv
         uses: astral-sh/setup-uv@v5
         with:
           python-version: "3.11"
-          
+
       - name: Build package
         run: |
           pip install build
           python -m build
-          
+
       - name: Publish to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
