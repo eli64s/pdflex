@@ -1,9 +1,0 @@
-name: 'Checkout'
-description: 'Checks out the repository'
-runs:
-  using: "composite"
-  steps:
-    - run: |
-        git config --global --add safe.directory $GITHUB_WORKSPACE
-        git checkout ${GITHUB_REF#refs/heads/}
-      shell: bash
