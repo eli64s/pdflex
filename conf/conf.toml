@@ -1,9 +1,0 @@
-[paths]
-input = "docs/pdf_input.pdf"
-output = "docs/pdf_updated.pdf"
-test_pdf = "docs/test_invoice.pdf"
-
-[regex]
-name_pattern = "(.*?)"
-amount_pattern = "\\$(\\d+)"
-search_pattern = "(Nov(?:ember)?\\s([1-9]|([12][0-9])|(3[01])),\\s\\d\\d\\d\\d)"

@@ -1,186 +1,342 @@
+<div id="top" align="left">
 
-<div align="center">
-<h1 align="center">
-<img src="https://img.icons8.com/?size=192&id=48191&format=png" width="100" />
-<br>
-pypdf
-</h1>
-<h3>◦ Empower your PDFs with <i>pypdf!</i></h3>
-<h3>◦ Developed with the software listed below:</h3>
+<!-- HEADER -->
+<!-- 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/eli64s/pdflex/ed2534164a2f7f2a7b4aafef998127791b205f30/docs/assets/logo-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/eli64s/pdflex/ed2534164a2f7f2a7b4aafef998127791b205f30/docs/assets/logo-light.svg">
+  <img alt="pdflex Logo" src="https://raw.githubusercontent.com/eli64s/pdflex/ed2534164a2f7f2a7b4aafef998127791b205f30/docs/assets/logo-light.svg" width="900" style="max-width: 100%;">
+</picture>
+-->
 
-<p align="center">
-    <img src="https://img.shields.io/badge/Markdown-000000.svg?stylee&logo=Markdown&logoColor=white" alt="Markdown" />
-    <img src="https://img.shields.io/badge/Python-3776AB.svg?stylee&logo=Python&logoColor=white" alt="Python" />
-    <img src="https://img.shields.io/badge/Pytest-0A9EDC.svg?stylee&logo=Pytest&logoColor=white" alt="pytest" />
-    <img src="https://img.shields.io/badge/GNU%20Bash-4EAA25.svg?stylee&logo=GNU-Bash&logoColor=white" alt="Bash" />
-    <img src="https://img.shields.io/badge/Anaconda-44A833.svg?&logo=Anaconda&logoColor=white" alt="Anaconda" />
+<div>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 240">
+      <!-- Gradients -->
+      <defs>
+          <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="33%" style="stop-color: #FF1493" />
+              <stop offset="67%" style="stop-color: #00F5FF" />
+              <stop offset="100%" style="stop-color: #4B0082" />
+          </linearGradient>
+          <!-- Background pattern -->
+          <pattern id="gridPattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+              <rect width="20" height="20" fill="none" />
+              <circle cx="10" cy="10" r="1" fill="#E2E8F0" opacity="0.2" />
+          </pattern>
+      </defs>
+      <!-- Background -->
+      <rect width="100%" height="100%" fill="white" />
+      <rect width="100%" height="100%" fill="url(#gridPattern)" />
+      <!-- Main Text Group - Moved to left edge -->
+      <g transform="translate(20, 120)">
+          <!-- PDF Text -->
+          <text x="0" y="0" font-family="Arial, sans-serif" font-size="84" font-weight="bold" fill="url(#textGradient)">
+            <tspan>PDFlex</tspan>
+            <!-- <tspan fill="#7934C5">FLEX</tspan> -->
+          </text>
+          <!-- Animated underline -->
+          <rect x="0" y="10" width="360" height="4" fill="url(#textGradient)">
+              <animate attributeName="width" values="0;360;360" dur="1.5s" begin="0s" fill="freeze" />
+          </rect>
+      </g>
+      <!-- Tagline - Aligned with text -->
+      <text x="20" y="164" font-family="Arial, sans-serif" font-size="22" fill="#7934C5" opacity="0.8">
+          Python tools for PDF automation
+      </text>
+      <!-- Sub tagline - Aligned with text -->
+      <text x="20" y="190" font-family="Arial, sans-serif" font-size="16" fill="#7934C5" opacity="0.6">
+          Convert | Extract | Merge | Transform
+      </text>
+      <!-- Decorative Elements - Adjusted position -->
+      <g transform="translate(440, 100)">
+          <!-- Stylized document icon -->
+          <path d="M20,0 L50,0 L70,20 L70,90 L20,90 Z" fill="none" stroke="url(#textGradient)" stroke-width="2">
+              <animate attributeName="stroke-dasharray" from="200" to="0" dur="2s" fill="freeze" />
+          </path>
+          <path d="M50,0 L50,20 L70,20" fill="none" stroke="url(#textGradient)" stroke-width="2" />
+      </g>
+  </svg>
 </div>
 
+<!-- <h3 align="left">
+  Powerful Tools for Modern Documentation
+</h3>
+
+<p align="left">
+  <em>A powerful toolkit for transforming, validating, and managing your Markdown documentation.</em>
+</p> -->
+
+<!-- BADGES -->
+<div align="left">
+  <p align="left" style="margin-bottom: 20px;">
+    <a href="https://github.com/eli64s/pdflex/actions">
+      <img src="https://img.shields.io/github/actions/workflow/status/eli64s/pdflex/ci.yml?label=CI&style=flat&logo=githubactions&logoColor=white&labelColor=2A2A2A&color=FF1493" alt="GitHub Actions" />
+    </a>
+    <a href="https://app.codecov.io/gh/eli64s/pdflex">
+      <img src="https://img.shields.io/codecov/c/github/eli64s/pdflex?label=Coverage&style=flat&logo=codecov&logoColor=white&labelColor=2A2A2A&color=00F5FF" alt="Coverage" />
+    </a>
+    <!-- <a href="https://pypi.org/project/pdflex/">
+      <img src="https://img.shields.io/pypi/v/pdflex?label=PyPI&style=flat&logo=pypi&logoColor=white&labelColor=2A2A2A&color=3d8be1" alt="PyPI Version" />
+    </a>
+    <a href="https://github.com/eli64s/pdflex">
+      <img src="https://img.shields.io/pypi/pyversions/pdflex?label=Python&style=flat&logo=python&logoColor=white&labelColor=2A2A2A&color=9b26d4" alt="Python Version" />
+    </a> -->
+    <a href="https://opensource.org/license/mit/">
+      <img src="https://img.shields.io/github/license/eli64s/pdflex?label=License&style=flat&logo=opensourceinitiative&logoColor=white&labelColor=2A2A2A&color=4B0082" alt="MIT License">
+    </a>
+  </p>
+</div>
+
+<div align="left">
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="4">
+    <defs>
+        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="33%" style="stop-color: #FF1493" />
+            <stop offset="67%" style="stop-color:#00F5FF" />
+            <stop offset="100%" style="stop-color:#4B0082" />
+        </linearGradient>
+    </defs>
+    <rect width="100%" height="2.5" fill="url(#grad1)" />
+</svg>
+</div>
+
+</div>
+<!-- HEADER END -->
+
+## What is `PDFlex?`
+
+PDFlex is a powerful PDF processing toolkit for Python. It provides robust tools for PDF validation, text extraction, merging (with custom separator pages), searching, and more—all built to streamline your PDF automation workflows.
+
+## Features
+
+- **PDF Validation:** Quickly verify if a file is a valid PDF.
+- **Text Extraction:** Extract text from PDFs using either PyMuPDF or PyPDF.
+- **Directory Processing:** Process entire directories of PDFs for text extraction.
+- **PDF Merging:** Merge multiple PDF files into one, automatically inserting a custom separator page between documents.
+  - The separator page displays the title (derived from the filename) with underscores and hyphens removed.
+  - Supports both portrait and landscape separator pages (ideal for lecture slides).
+- **PDF Searching:** Recursively search for PDFs in a directory based on filename patterns (e.g., numeric float prefixes).
+
+
+<!-- ## Documentation
+
+Full documentation is available at [https://pdflex.readthedocs.io/](https://pdflex.readthedocs.io/)
+
+- [User Guide](https://pdflex.readthedocs.io/en/latest/user_guide.html)
+- [API Reference](https://pdflex.readthedocs.io/en/latest/api.html)
+- [Examples](https://pdflex.readthedocs.io/en/latest/examples.html) -->
+
 ---
 
-## 📒 Table of Contents
-- [📒 Table of Contents](#-table-of-contents)
-- [📍 Overview](#-overview)
-- [⚙️ Features](#️-features)
-- [📂 Project Structure](#-project-structure)
-- [🧩 Modules](#-modules)
-- [🚀 Getting Started](#-getting-started)
-  - [✔️ Prerequisites](#️-prerequisites)
-  - [💻 Installation](#-installation)
-  - [🎮 Using pypdf](#-using-pypdf)
-  - [🧪 Running Tests](#-running-tests)
-- [🗺 Roadmap](#-roadmap)
-- [🤝 Contributing](#-contributing)
-- [📄 License](#-license)
-- [👏 Acknowledgments](#-acknowledgments)
+## Quick Start
 
----
+## Installation
 
-## 📍 Overview
-
-The pypdf project provides a set of Python scripts for manipulating PDF documents. It includes functionalities such as extracting data using regular expressions, searching and replacing specific values, generating test PDFs with random dates and invoices, and applying formatting and linting to the codebase. This project aims to simplify PDF processing tasks by providing easy-to-use scripts that automate various PDF-related operations. Its value proposition lies in its ability to save time and effort by streamlining PDF manipulation workflows.
-
----
-
-## ⚙️ Features
-
-Feature | Description |
-|-----|-----|
-| **🏗 Architecture** | The codebase follows a modular architecture with separate files for different functionalities, such as PDF parsing, searching, and creating. It also uses a configuration file to define the application's settings, enhancing flexibility and maintainability. |
-| **📑 Documentation** | The codebase lacks comprehensive documentation. While some functions and classes have inline comments, there is no overall documentation explaining the codebase's purpose, usage, or high-level architecture. Improved documentation would enhance understandability and ease of maintenance. |
-| **🧩 Dependencies** | The codebase relies on several external libraries, such as pdfplumber, fitz, ReportLab, and PyPDF. These libraries provide powerful PDF processing features and save development effort. However, the codebase does not include a detailed explanation of their usage or the reasons behind their selection. |
-| **♻️ Modularity** | The codebase demonstrates good modularity by separating functionality into different files. Each file handles a specific aspect of PDF processing, such as parsing, searching, or creating. However, there could be room for further modularization, such as extracting common utility functions into a shared module. |
-| **✔️ Testing** | The codebase lacks comprehensive unit tests. While it includes some test files, their coverage is limited. Further testing, including unit tests for individual functions and integration tests for complete scenarios, would help ensure code correctness and maintainability. |
-| **⚡️ Performance** | It is difficult to assess performance without specific requirements or benchmarks. However, the codebase makes use of efficient libraries for PDF processing, such as pdfplumber and fitz, which are known for their performance. The codebase would benefit from performance profiling and optimization if performance issues arise. |
-| **🔒 Security** | There are no specific security measures mentioned in the codebase. It is important to handle user input, particularly regular expressions and file paths, with caution to mitigate potential security vulnerabilities like path traversal or code injection attacks. |
-| **🔀 Version Control** | The codebase is hosted on GitHub, utilizing the Git version control system. This enables collaboration among developers, code version management, and the ability to roll back changes if necessary. The repository contains multiple commits, indicating ongoing development and iterative improvements. |
-| **🔌 Integrations** | There are no explicit integrations mentioned in the codebase. However, the codebase could be integrated with other systems or APIs to enhance functionality, such as fetching PDFs from external sources or integrating with document management systems. |
-| **📈 Scalability** | The codebase does not exhibit explicit scalability features, such as distributed processing or load balancing. However, its modular architecture allows for adding new functionality or extending existing features without significant code changes. It could benefit from scalability considerations if the application's requirements demand it in the future. |
-
----
-
-
-## 📂 Project Structure
-
+PDFlex is available on PyPI. To install using pip:
 
 ```bash
-repo
-├── Makefile
-├── README.md
-├── conf
-│   └── conf.toml
-├── docs
-│   ├── example.pdf
-│   ├── pdf_input.pdf
-│   ├── pdf_updated.pdf
-│   └── test_invoice.pdf
-├── requirements.txt
-├── scripts
-│   └── clean.sh
-└── src
-    ├── conf.py
-    ├── create_pdf_test_dates.py
-    ├── create_pdf_test_invoice.py
-    ├── pdf_parse_by_regex.py
-    └── pdf_search_and_replace.py
+pip install -U pdflex
+```
 
-5 directories, 14 files
+Alternatively, install in an isolated environment with pipx:
+
+```bash
+pipx install pdflex
+```
+
+For the fastest installation using uv:
+
+```bash
+uv tool install pdflex
 ```
 
 ---
 
-## 🧩 Modules
+## Usage
 
-<details closed><summary>Root</summary>
+### Command-Line Interface (CLI)
 
-| File     | Summary                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Module   |
-|:---------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------|
-| Makefile | The code snippet provides a Makefile with several functionalities.-The `help` target displays a list of commands and their descriptions.-The `style` target applies formatting and linting to the code using tools like autoflake, autopep8, black, flake8, isort, and yapf.-The `clean` target calls the `style` target and then executes a clean.sh script to remove unnecessary files.-The `conda` target creates a conda environment named `pypdf` with Python 3.9 and installs the dependencies specified in requirements.txt.-The `venv` target creates a virtual environment named `pypdf`, activates it, and installs the dependencies specified in requirements.txt. | Makefile |
+PDFlex provides a convenient CLI for merging and searching PDFs. The CLI supports two primary commands: `merge` and `search`.
 
-</details>
+#### Merge Command
 
-<details closed><summary>Scripts</summary>
+Merge multiple PDF files into a single document while automatically inserting a separator page before each document.
 
-| File     | Summary                                                                                                                                                                                                                                                                                                                     | Module           |
-|:---------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------|
-| clean.sh | This code snippet is a bash script that performs various clean-up tasks. It removes backup files, Python cache files, cache directories, VS Code settings, build artifacts, pytest cache, benchmarks, and specific files. This script helps maintain a clean working environment by removing unnecessary files and folders. | scripts/clean.sh |
+**Usage:**
 
-</details>
+```bash
+pdflex merge /path/to/file1.pdf /path/to/file2.pdf -o merged_output.pdf
+```
 
-<details closed><summary>Src</summary>
+Add the `--landscape` flag to create separator pages in landscape orientation:
 
-| File                       | Summary                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Module                         |
-|:---------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------|
-| pdf_parse_by_regex.py      | The provided code snippet extracts data from a PDF file using regular expressions. It takes in a PDF file, name pattern, and amount pattern as input, and returns a dictionary mapping names to their corresponding amounts. It uses the pdfplumber library to open the PDF file, and then applies the given patterns to extract the relevant data. Finally, it prints the parsed data in a formatted manner.                                                                                                                   | src/pdf_parse_by_regex.py      |
-| conf.py                    | This code snippet defines a configuration file for an application. It uses the `dataclasses` module to define three data classes: `PathsConfig` for paths configuration, `RegexConfig` for regex configuration, and `AppConfig` for overall application configuration. The `read_config_file` function reads the configuration file in TOML format and returns a populated `AppConfig` object.                                                                                                                                  | src/conf.py                    |
-| pdf_search_and_replace.py  | The provided code is a Python script that searches for a specific value in a PDF document, identified by a regular expression pattern, and replaces it with a new value. It utilizes the `fitz` library to open and manipulate PDF files, specifically applying redactions to remove the old value and inserting the new value at a specific location on the PDF page. The script reads the configuration from a TOML file and performs the replacement on the specified input PDF, saving the modified PDF to the output path. | src/pdf_search_and_replace.py  |
-| create_pdf_test_dates.py   | This code snippet generates a PDF document with random dates displayed on each page. It uses the ReportLab library to create the PDF and the datetime module to generate random dates. The add_random_dates_to_page() function is called twice to add dates to the first and second pages of the PDF. The resulting PDF is saved as "docs/example.pdf".                                                                                                                                                                         | src/create_pdf_test_dates.py   |
-| create_pdf_test_invoice.py | The provided code snippet creates a test PDF document with a random invoice. It uses the PyPDF class, which is a subclass of the FPDF library's FPDF class. The PyPDF class includes methods for setting up the header and footer of the PDF document, generating the invoice content, and saving the PDF to the specified output path. The generated invoice includes random names and amounts, which are added to a table in the PDF document.                                                                                | src/create_pdf_test_invoice.py |
+```bash
+pdflex merge /path/to/file1.pdf /path/to/file2.pdf -o merged_output.pdf --landscape
+```
 
-</details>
+#### Search and Merge Command
+
+Search for PDF files in a directory based on filename filters (or search for lecture slides with numeric float prefixes) and merge them into one PDF.
+
+**Usage:**
+
+- **General Search:**
+
+  ```bash
+  pdflex search /path/to/search -o merged_output.pdf --prefix "Chapter" --suffix ".pdf"
+  ```
+
+- **Lecture Slides Merge:**  
+  (Merges all PDFs whose filenames start with a numeric float prefix like `1.2_`, `3.2_`, etc., in sorted order. Separator pages will be in landscape orientation.)
+
+  ```bash
+  pdflex search /path/to/algorithms-and-computation -o merged_lectures.pdf --lecture
+  ```
+
+### Python API Usage
+
+You can also use PDFlex directly from your Python code. Below are examples for some common tasks.
+
+#### Merging PDFs with Separator Pages
+
+```python
+from pathlib import Path
+from pdflex.merge import merge_pdfs
+
+# List of PDF file paths to merge
+pdf_files = [
+    "/path/to/document1.pdf",
+    "/path/to/document2.pdf"
+]
+
+# Merge files, using landscape separator pages (ideal for lecture slides)
+merge_pdfs(pdf_files, output_path="merged_output.pdf", landscape=True)
+```
+
+#### Searching for PDFs by Filename
+
+```python
+from pdflex.search import search_pdfs, search_numeric_prefixed_pdfs
+
+# General search: Find PDFs that start with a prefix and/or end with a suffix
+pdf_list = search_pdfs("/path/to/search", prefix="Chapter", suffix=".pdf")
+print("Found PDFs:", pdf_list)
+
+# Lecture slides: Find PDFs with numeric float prefixes (e.g., "1.2_Intro.pdf")
+lecture_slides = search_numeric_prefixed_pdfs("/path/to/algorithms-and-computation")
+print("Found lecture slides:", lecture_slides)
+```
+
+<!-- 
+#### Extracting Text from a PDF
+
+```python
+from pdflex import extract_text_from_pdf
+
+# Extract text from a PDF using the auto-detection method (tries PyMuPDF then falls back to PyPDF)
+output_txt = extract_text_from_pdf("invoice.pdf", method="auto")
+print(f"Extracted text saved to: {output_txt}")
+```
+
+#### Processing an Entire Directory
+
+```python
+from pdflex import process_directory
+
+# Process all PDFs in a directory and extract their text to corresponding .txt files.
+process_directory("/path/to/pdf_directory", output_dir="/path/to/text_outputs")
+```
 
 ---
 
-## 🚀 Getting Started
+## API Reference
 
-### ✔️ Prerequisites
+For detailed API documentation, please refer to the [API Reference](https://pdflex.readthedocs.io/en/latest/api.html).
 
-Before you begin, ensure that you have the following prerequisites installed:
-- [Python 3.7+](https://www.python.org/downloads/)
+### Exceptions
+
+- **PDFlexError:** Raised for any error during PDF processing (e.g., invalid PDF, extraction failure).
+
+### Modules Overview
+
+- **`pdflex.merge`**  
+  Contains functions to merge PDFs, insert separator pages (with customizable orientation and title cleaning), and write the final merged document.
+
+- **`pdflex.search`**  
+  Provides functions to recursively search for PDFs in a directory based on filename patterns, including numeric float prefixes for lecture slides.
+
+- **`pdflex.extract`** (and similar)  
+  Functions for extracting text using PyMuPDF or PyPDF, validating PDF files, and processing directories of PDFs.
+
+- **`pdflex.cli`**  
+  Command-line interface that exposes the `merge` and `search` commands, complete with rich console output.
+-->
+
+---
+
+## Contributing
+
+Contributions are welcome! Whether it's bug reports, feature requests, or code contributions, please feel free to:
+
+1. Open an [issue][github-issues]
+2. Submit a [pull request][github-pulls]
+3. Improve documentation.
+4. Share your ideas!
+
+---
+
+## Acknowledgments
+
+This project is built upon several awesome PDF open-source projects:
+
+- [pypdf](https://github.com/pymupdf/PyMuPDF)
 - [pdfplumber](https://github.com/jsvine/pdfplumber)
-
-### 💻 Installation
-
-1. Clone the pypdf repository:
-```sh
-git clone https://github.com/eli64s/pypdf
-```
-
-2. Change to the project directory:
-```sh
-cd pypdf
-```
-
-3. Install the dependencies:
-```sh
-pip install -r requirements.txt
-```
-
-### 🎮 Using pypdf
-
-```sh
-python3 src/pdf_parse_by_regex.py
-```
-
-### 🧪 Running Tests
-```sh
-pytest
-```
+- [reportlab](https://www.reportlab.com/opensource/)
 
 ---
 
+## License
 
-## 🗺 Roadmap
+PDFlex is released under the [MIT][mit-license] license.
+Copyright (c) 2020 to present [PDFlex][pdflex] and contributors.
 
-- [ ] Implement more PDF parsing functionalities.
-- [ ] Add unit tests for each module.
+<div align="left">
+  <a href="#top">
+    <img src="docs/assets/button.svg" width="100px" height="100px" alt="Return to Top">
+  </a>
+</div>
 
----
+<div align="left">
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="4">
+    <defs>
+        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="33%" style="stop-color: #FF1493" />
+            <stop offset="67%" style="stop-color:#00F5FF" />
+            <stop offset="100%" style="stop-color:#4B0082" />
+        </linearGradient>
+    </defs>
+    <rect width="100%" height="2.5" fill="url(#grad1)" />
+</svg>
+</div>
 
-## 🤝 Contributing
+<!-- <div align="center">
+  <img src="https://raw.githubusercontent.com/eli64s/pdflex/216a92894e6f30c707a214fad5a5fba417e3bc39/docs/assets/line.svg" alt="separator" width="100%" height="2px" style="margin: 20px 0;">
+</div> -->
 
-[Contributing Guidelines](./CONTRIBUTING.md)
+<!-- REFERENCE LINKS -->
 
----
+<!-- PROJECT RESOURCES -->
+[pypi]: https://pypi.org/project/pdflex/
+[pdflex]: https://github.com/eli64s/pdflex
+[github-issues]: https://github.com/eli64s/pdflex/issues
+[github-pulls]: https://github.com/eli64s/pdflex/pulls
+[mit-license]: https://github.com/eli64s/pdflex/blob/main/LICENSE
+[examples]: https://github.com/eli64s/pdflex/tree/main/docs/examples
 
-## 📄 License
-
-[MIT](./LICENSE)
-
----
-
-## 👏 Acknowledgments
-
-- [pdfplumber](https://github.com/jsvine/pdfplumber)
-
----
+<!-- DEV TOOLS -->
+[python]: https://www.python.org/
+[pip]: https://pip.pypa.io/en/stable/
+[pipx]: https://pipx.pypa.io/stable/
+[uv]: https://docs.astral.sh/uv/
+[mkdocs]: https://www.mkdocs.org/
+[mkdocs.yml]: https://www.mkdocs.org/user-guide/configuration/

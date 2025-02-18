@@ -30,7 +30,7 @@ git commit -m 'Implemented new feature.'
 ```sh
 git push origin new-feature-branch/add-some-feature
 ```
-7. Create a [pull request](https://github.com/eli64s/pypdf/pulls) to the original repository.
+7. Create a [pull request](https://github.com/eli64s/pdflex/pulls) to the original repository.
 
 Open a new pull request to the original project repository. In the pull request, describe the changes you've made and why they're necessary.
 The project maintainers will review your changes and provide feedback or merge them into the main branch.

@@ -1,0 +1,359 @@
+Test Slide 1
+1. 85 + 30 = ?
+Answer: 115
+2. 5 × 5 = ?
+Answer: 25
+3. √16 = ?
+Answer: 4
+4. 49 + 80 = ?
+Answer: 129
+5. 12 × 18 = ?
+Answer: 216
+
+Test Slide 2
+1. 6 × 20 = ?
+Answer: 120
+2. 88 ÷ 8 = ?
+Answer: 11
+3. √144 = ?
+Answer: 12
+4. √144 = ?
+Answer: 12
+5. 4 × 15 = ?
+Answer: 60
+
+Test Slide 3
+1. 43 + 43 = ?
+Answer: 86
+2. 96 + 74 = ?
+Answer: 170
+3. 11 × 16 = ?
+Answer: 176
+4. 16 ÷ 4 = ?
+Answer: 4
+5. 36 ÷ 6 = ?
+Answer: 6
+
+Test Slide 4
+1. √4 = ?
+Answer: 2
+2. 4 × 4 = ?
+Answer: 16
+3. 6 × 17 = ?
+Answer: 102
+4. 6 ÷ 2 = ?
+Answer: 3
+5. 19 × 19 = ?
+Answer: 361
+
+Test Slide 5
+1. 82 + 19 = ?
+Answer: 101
+2. √121 = ?
+Answer: 11
+3. 53 + 100 = ?
+Answer: 153
+4. 82 + 32 = ?
+Answer: 114
+5. 40 + 62 = ?
+Answer: 102
+
+Test Slide 6
+1. 12 + 96 = ?
+Answer: 108
+2. 99 ÷ 11 = ?
+Answer: 9
+3. 144 ÷ 12 = ?
+Answer: 12
+4. √49 = ?
+Answer: 7
+5. 4 × 18 = ?
+Answer: 72
+
+Test Slide 7
+1. 66 ÷ 11 = ?
+Answer: 6
+2. 24 ÷ 2 = ?
+Answer: 12
+3. 13 × 17 = ?
+Answer: 221
+4. 56 + 75 = ?
+Answer: 131
+5. 85 + 98 = ?
+Answer: 183
+
+Test Slide 8
+1. 90 ÷ 9 = ?
+Answer: 10
+2. √49 = ?
+Answer: 7
+3. 4 × 16 = ?
+Answer: 64
+4. 7 × 9 = ?
+Answer: 63
+5. 17 × 9 = ?
+Answer: 153
+
+Test Slide 9
+1. 50 ÷ 5 = ?
+Answer: 10
+2. √16 = ?
+Answer: 4
+3. 48 ÷ 4 = ?
+Answer: 12
+4. 55 + 73 = ?
+Answer: 128
+5. √81 = ?
+Answer: 9
+
+Test Slide 10
+1. 12 × 11 = ?
+Answer: 132
+2. √144 = ?
+Answer: 12
+3. 72 ÷ 6 = ?
+Answer: 12
+4. 33 + 64 = ?
+Answer: 97
+5. √25 = ?
+Answer: 5
+
+Test Slide 11
+1. 87 + 78 = ?
+Answer: 165
+2. 81 + 38 = ?
+Answer: 119
+3. √4 = ?
+Answer: 2
+4. 72 + 16 = ?
+Answer: 88
+5. 80 ÷ 8 = ?
+Answer: 10
+
+Test Slide 12
+1. √36 = ?
+Answer: 6
+2. √36 = ?
+Answer: 6
+3. 15 × 8 = ?
+Answer: 120
+4. 9 × 5 = ?
+Answer: 45
+5. √144 = ?
+Answer: 12
+
+Test Slide 13
+1. 18 × 5 = ?
+Answer: 90
+2. 11 × 8 = ?
+Answer: 88
+3. 36 + 24 = ?
+Answer: 60
+4. 97 + 14 = ?
+Answer: 111
+5. √25 = ?
+Answer: 5
+
+Test Slide 14
+1. 120 ÷ 12 = ?
+Answer: 10
+2. 6 ÷ 1 = ?
+Answer: 6
+3. √4 = ?
+Answer: 2
+4. 89 + 96 = ?
+Answer: 185
+5. √121 = ?
+Answer: 11
+
+Test Slide 15
+1. 14 ÷ 2 = ?
+Answer: 7
+2. 50 ÷ 5 = ?
+Answer: 10
+3. 20 × 11 = ?
+Answer: 220
+4. 64 + 79 = ?
+Answer: 143
+5. 20 × 20 = ?
+Answer: 400
+
+Test Slide 16
+1. 4 × 12 = ?
+Answer: 48
+2. 45 ÷ 9 = ?
+Answer: 5
+3. 28 ÷ 7 = ?
+Answer: 4
+4. 50 ÷ 10 = ?
+Answer: 5
+5. 3 × 6 = ?
+Answer: 18
+
+Test Slide 17
+1. √121 = ?
+Answer: 11
+2. 49 + 61 = ?
+Answer: 110
+3. 85 + 80 = ?
+Answer: 165
+4. 33 ÷ 3 = ?
+Answer: 11
+5. 9 ÷ 9 = ?
+Answer: 1
+
+Test Slide 18
+1. √36 = ?
+Answer: 6
+2. 49 ÷ 7 = ?
+Answer: 7
+3. 9 ÷ 1 = ?
+Answer: 9
+4. √64 = ?
+Answer: 8
+5. 20 × 6 = ?
+Answer: 120
+
+Test Slide 19
+1. 32 + 59 = ?
+Answer: 91
+2. 13 + 90 = ?
+Answer: 103
+3. 98 + 91 = ?
+Answer: 189
+4. 67 + 84 = ?
+Answer: 151
+5. 33 ÷ 3 = ?
+Answer: 11
+
+Test Slide 20
+1. 18 × 11 = ?
+Answer: 198
+2. 47 + 43 = ?
+Answer: 90
+3. 100 + 67 = ?
+Answer: 167
+4. √144 = ?
+Answer: 12
+5. 88 + 36 = ?
+Answer: 124
+
+Test Slide 21
+1. 29 + 12 = ?
+Answer: 41
+2. 61 + 52 = ?
+Answer: 113
+3. 33 ÷ 3 = ?
+Answer: 11
+4. 19 × 19 = ?
+Answer: 361
+5. 12 + 58 = ?
+Answer: 70
+
+Test Slide 22
+1. 2 × 15 = ?
+Answer: 30
+2. 8 × 16 = ?
+Answer: 128
+3. 51 + 16 = ?
+Answer: 67
+4. 24 ÷ 3 = ?
+Answer: 8
+5. 92 + 45 = ?
+Answer: 137
+
+Test Slide 23
+1. 18 × 13 = ?
+Answer: 234
+2. 67 + 98 = ?
+Answer: 165
+3. √64 = ?
+Answer: 8
+4. 76 + 69 = ?
+Answer: 145
+5. 57 + 32 = ?
+Answer: 89
+
+Test Slide 24
+1. √64 = ?
+Answer: 8
+2. 84 + 54 = ?
+Answer: 138
+3. 87 + 26 = ?
+Answer: 113
+4. 59 + 67 = ?
+Answer: 126
+5. √121 = ?
+Answer: 11
+
+Test Slide 25
+1. 48 + 84 = ?
+Answer: 132
+2. 85 + 59 = ?
+Answer: 144
+3. 48 ÷ 12 = ?
+Answer: 4
+4. 61 + 36 = ?
+Answer: 97
+5. √9 = ?
+Answer: 3
+
+Test Slide 26
+1. √9 = ?
+Answer: 3
+2. 70 ÷ 10 = ?
+Answer: 7
+3. 10 × 2 = ?
+Answer: 20
+4. 10 × 4 = ?
+Answer: 40
+5. 99 + 60 = ?
+Answer: 159
+
+Test Slide 27
+1. 16 × 11 = ?
+Answer: 176
+2. 10 × 6 = ?
+Answer: 60
+3. 96 ÷ 8 = ?
+Answer: 12
+4. 81 ÷ 9 = ?
+Answer: 9
+5. 19 × 5 = ?
+Answer: 95
+
+Test Slide 28
+1. 15 + 33 = ?
+Answer: 48
+2. √81 = ?
+Answer: 9
+3. 42 + 56 = ?
+Answer: 98
+4. √36 = ?
+Answer: 6
+5. 33 + 87 = ?
+Answer: 120
+
+Test Slide 29
+1. √36 = ?
+Answer: 6
+2. √16 = ?
+Answer: 4
+3. 9 × 6 = ?
+Answer: 54
+4. 16 ÷ 4 = ?
+Answer: 4
+5. 35 ÷ 7 = ?
+Answer: 5
+
+Test Slide 30
+1. √25 = ?
+Answer: 5
+2. 25 ÷ 5 = ?
+Answer: 5
+3. 4 × 2 = ?
+Answer: 8
+4. 20 ÷ 5 = ?
+Answer: 4
+5. 88 ÷ 8 = ?
+Answer: 11
