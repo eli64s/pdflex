@@ -5,7 +5,7 @@ from contextlib import contextmanager
 from pathlib import Path
 from typing import Union
 
-import fitz
+import pymupdf as fitz
 from pypdf import PdfReader
 
 from pdflex.exceptions import PDFlexError
