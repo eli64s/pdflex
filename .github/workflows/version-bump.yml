@@ -1,16 +1,38 @@
 name: Version Bump
+
 on:
-  release:
-    types: [created]
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'New version (e.g., 1.2.3)'
+        required: true
+        type: string
 
 jobs:
   bump-version:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    environment: pypi
+    
     steps:
       - uses: actions/checkout@v4
-      - name: Bump version
+        with:
+          fetch-depth: 0
+          
+      - name: Configure Git
         run: |
-          # Extract version from release tag
-          VERSION=${GITHUB_REF#refs/tags/v}
-          # Update version in __init__.py
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          
+      - name: Update version
+        run: |
+          VERSION=${{ inputs.version }}
           sed -i "s/__version__ = .*/__version__ = \"$VERSION\"/" src/pdflex/__init__.py
+          
+      - name: Commit and tag
+        run: |
+          git add src/pdflex/__init__.py
+          git commit -m "Bump version to ${{ inputs.version }}"
+          git tag -a "v${{ inputs.version }}" -m "Release v${{ inputs.version }}"
+          git push origin main --tags
