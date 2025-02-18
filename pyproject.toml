@@ -1,6 +1,6 @@
 [project]
 name = "pdflex"
-version = "0.1.0"
+version = "0.1.1"
 description = "Python tools for PDF automation."
 dynamic = ["readme"]
 keywords = [
@@ -59,19 +59,12 @@ classifiers = [
     "Natural Language :: English",
 ]
 dependencies = [
-    "dacite",
     "fitz",
-    "pdfplumber",
     "pydantic-settings",
     "pydantic",
-    "pymupdf",
     "pypdf",
-    "pypdf2",
-    "pyyaml",
     "reportlab",
-    "requests",
     "rich",
-    "toml ; python_full_version < '3.11'",
 ]
 
 optional-dependencies.docs = [
@@ -87,28 +80,23 @@ dev = [
     "ipykernel",
 ]
 test = [
-    "coverage[toml]>=7.6.9",
-    "pytest>=8.3.4",
-    "pytest-asyncio>=0.25",
-    "pytest-cov>=6",
-    "pytest-mock>=3.14.0",
-    "pytest-pretty>=1.2",
-    "pytest-randomly>=3.16",
-    "pytest-sugar>=1",
-    "pytest-xdist>=3.6.1",
+    "pytest",
+    "pytest-asyncio",
+    "pytest-cov",
+    "pytest-mock",
+    "pytest-pretty",
+    "pytest-randomly",
+    "pytest-sugar",
+    "pytest-xdist",
 ]
 docs = [
-    "mkdocs>=1.6.1",
-    "mkdocs-material>=9.5.47",
+    "mkdocs",
+    "mkdocs-material",
 ]
 lint = [
-    "mypy>=1.14",
-    "pyright>=1.1.391",
-    "ruff>=0.8.4",
-    "types-aiofiles>=24.1.0.20241221",
-    "types-pyyaml>=6.0.12.20240917",
-    "types-requests>=2.32.0.20241016",
-    "types-toml>=0.10.8.20240310",
+    "mypy",
+    "pyright",
+    "ruff",
 ]
 
 [tool.hatch.build]

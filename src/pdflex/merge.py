@@ -12,7 +12,7 @@ import warnings
 from pathlib import Path
 from typing import List
 
-from PyPDF2 import PdfMerger
+from pypdf import PdfMerger
 from reportlab.lib.pagesizes import landscape as rl_landscape
 
 # Import ReportLab modules to generate the separator page.

@@ -38,16 +38,16 @@ site/
 # root
 .pdflex/
 docs/*.md
-notebooks
 test_merge_numeric_prefixed_pdfs.py
 test_pdflex.py
 test_search_for_pdf_files.py
+
 # src.pdflex
 src/pdflex/extractors/
 src/pdflex/generators/
 src/pdflex/modifiers/
 src/pdflex/settings/
-src/pdflex/config.py
+src/pdflex/config.py'
 # tests
 tests/pdflex/extractors/
 tests/pdflex/modifiers/

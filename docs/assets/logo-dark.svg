@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 240">
+=======
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200">
+>>>>>>> Stashed changes
     <defs>
         <linearGradient id="textGradientDark" x1="0%" y1="0%" x2="100%" y2="0%">
             <stop offset="33%" style="stop-color: #FF69B4" />
@@ -9,6 +13,7 @@
             <rect width="20" height="20" fill="none" />
             <circle cx="10" cy="10" r="1" fill="#2D3748" opacity="0.2" />
         </pattern>
+<<<<<<< Updated upstream
     </defs>
     <!-- Background -->
     <rect width="1200" height="240" fill="#1A202C" />
@@ -19,6 +24,40 @@
         <text x="0" y="0" font-family="Arial, sans-serif" font-size="84" font-weight="bold" fill="url(#textGradientDark)">
             <tspan>pdf</tspan>
             <tspan fill="#B794F4">FLEX</tspan>
+=======
+        <linearGradient id="docGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color: #FF69B4; stop-opacity: 0.1" />
+            <stop offset="100%" style="stop-color: #9370DB; stop-opacity: 0.1" />
+        </linearGradient>
+    </defs>
+    <!-- Background -->
+    <rect width="600" height="200" fill="#1A202C" />
+    <rect width="600" height="200" fill="url(#gridPatternDark)" />
+    <!-- Enhanced Document Icon -->
+    <g transform="translate(420, 40)">
+        <!-- Main document body -->
+        <path d="M20,0 L100,0 L140,40 L140,150 L20,150 Z" fill="url(#docGradient)" stroke="url(#textGradientDark)" stroke-width="2">
+            <animate attributeName="stroke-dasharray" from="600" to="0" dur="2s" fill="freeze" />
+        </path>
+        <!-- Folded corner -->
+        <path d="M100,0 L100,40 L140,40" fill="none" stroke="url(#textGradientDark)" stroke-width="2" />
+        <!-- Document lines -->
+        <path d="M40,60 L120,60" stroke="#B794F4" stroke-width="2" opacity="0.6">
+            <animate attributeName="stroke-dasharray" from="80" to="0" dur="1.5s" fill="freeze" />
+        </path>
+        <path d="M40,85 L120,85" stroke="#B794F4" stroke-width="2" opacity="0.6">
+            <animate attributeName="stroke-dasharray" from="80" to="0" dur="1.5s" delay="0.2s" fill="freeze" />
+        </path>
+        <path d="M40,110 L120,110" stroke="#B794F4" stroke-width="2" opacity="0.6">
+            <animate attributeName="stroke-dasharray" from="80" to="0" dur="1.5s" delay="0.4s" fill="freeze" />
+        </path>
+    </g>
+    <!-- Main Text Group -->
+    <g transform="translate(40, 100)">
+        <!-- PDF Text -->
+        <text x="0" y="0" font-family="Arial, sans-serif" font-size="84" font-weight="bold" fill="url(#textGradientDark)">
+            <tspan>pdFlex</tspan>
+>>>>>>> Stashed changes
         </text>
         <!-- Animated underline -->
         <rect x="0" y="10" width="360" height="4" fill="url(#textGradientDark)">
@@ -26,6 +65,7 @@
         </rect>
     </g>
     <!-- Tagline -->
+<<<<<<< Updated upstream
     <text x="80" y="164" font-family="Arial, sans-serif" font-size="22" fill="#B794F4" opacity="0.8">
         Python PDF tools.
     </text>
@@ -41,3 +81,13 @@
         <path d="M50,0 L50,20 L70,20" fill="none" stroke="url(#textGradientDark)" stroke-width="2" />
     </g>
 </svg>
+=======
+    <text x="40" y="144" font-family="Arial, sans-serif" font-size="22" fill="#B794F4" opacity="0.8">
+        Python PDF tools
+    </text>
+    <!-- Sub tagline -->
+    <text x="40" y="170" font-family="Arial, sans-serif" font-size="16" fill="#B794F4" opacity="0.6">
+        Convert | Extract | Merge | Transform
+    </text>
+</svg>
+>>>>>>> Stashed changes

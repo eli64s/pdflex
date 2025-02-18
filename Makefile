@@ -6,7 +6,7 @@ MAKEFLAGS += --warn-undefined-variables
 MAKEFLAGS += --no-builtin-rules
 
 PYPROJECT_TOML := pyproject.toml
-PYPI_VERSION := 0.1.0
+PYPI_VERSION := 0.1.1
 PYTHON_VERSION := 3.11
 TARGET := src/pdflex tests
 TARGET_TEST := tests
@@ -61,11 +61,14 @@ venv: ## Create a virtual environment
 
 # -- Docs ---------------------------
 
+
 .PHONY: docs
 docs: ## Build documentation site using mkdocs
 	@echo -e "\n► Building documentation site... (not implemented)"
 
+
 # -- Lint ---------------------------
+
 
 .PHONY: format-toml
 format-toml: ## Format TOML files using pyproject-fmt
@@ -91,6 +94,28 @@ typecheck-mypy: ## Type-check Python files using MyPy
 .PHONY: typecheck-pyright
 typecheck-pyright: ## Type-check Python files using Pyright
 	uv run pyright $(TARGET)
+
+
+# -- Release ----------------------------
+
+
+RELEASE_FILES ?= .
+RELEASE_MSG   ?= "Release version $(PYPI_VERSION)"
+RELEASE_BRANCH ?= main
+TAG_PREFIX    ?= v
+
+.PHONY: release
+release:  ## Create and push a new version release
+ifndef version
+	$(error version parameter is required. Use 'make release version=X.Y.Z')
+endif
+	# make release version=1.2.3 RELEASE_FILES="file1 file2" RELEASE_MSG="Custom release message" RELEASE_BRANCH=develop TAG_PREFIX=release-"
+	@echo "Creating release version $(version)..."
+	@git add $(RELEASE_FILES)
+	@git commit -m "$(RELEASE_MSG)"
+	@git tag -a $(TAG_PREFIX)$(version) -m "$(RELEASE_MSG)"
+	@git push origin $(RELEASE_BRANCH)
+	@git push origin $(TAG_PREFIX)$(version)
 
 
 # -- Tests ----------------------------

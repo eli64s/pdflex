@@ -1,11 +1,19 @@
 <div id="top" align="left">
 
 <!-- HEADER -->
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/eli64s/pdflex/1ecee046e6fe585309371b6df12e78845881d3de/docs/assets/logo-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/eli64s/pdflex/1ecee046e6fe585309371b6df12e78845881d3de/docs/assets/logo-light.svg">
   <img alt="pdflex Logo" src="https://raw.githubusercontent.com/eli64s/pdflex/1ecee046e6fe585309371b6df12e78845881d3de/docs/assets/logo-light.svg" width="100%" style="max-width: 100%;">
 </picture>
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 
 <!-- BADGES -->
 <div align="left">
@@ -16,20 +24,25 @@
     <a href="https://app.codecov.io/gh/eli64s/pdflex">
       <img src="https://img.shields.io/codecov/c/github/eli64s/pdflex?label=Coverage&style=flat&logo=codecov&logoColor=white&labelColor=2A2A2A&color=00F5FF" alt="Coverage" />
     </a>
-    <!-- <a href="https://pypi.org/project/pdflex/">
+    <a href="https://pypi.org/project/pdflex/">
       <img src="https://img.shields.io/pypi/v/pdflex?label=PyPI&style=flat&logo=pypi&logoColor=white&labelColor=2A2A2A&color=3d8be1" alt="PyPI Version" />
     </a>
     <a href="https://github.com/eli64s/pdflex">
       <img src="https://img.shields.io/pypi/pyversions/pdflex?label=Python&style=flat&logo=python&logoColor=white&labelColor=2A2A2A&color=9b26d4" alt="Python Version" />
-    </a> -->
+    </a>
     <a href="https://opensource.org/license/mit/">
       <img src="https://img.shields.io/github/license/eli64s/pdflex?label=License&style=flat&logo=opensourceinitiative&logoColor=white&labelColor=2A2A2A&color=4B0082" alt="MIT License">
     </a>
   </p>
 </div>
 
+<<<<<<< Updated upstream
 <div align="left">
   <img src="https://raw.githubusercontent.com/eli64s/pdflex/d545ac98f5ad59ece892e638a7d3bdee593d8e88/docs/assets/line.svg" alt="thematic-break" width="100%" height="2px" style="margin: 20px 0;">
+=======
+<div align="center">
+  <img src="https://raw.githubusercontent.com/eli64s/pdflex/607d295f58914fc81a5b71fd994af90901b6433c/docs/assets/line.svg" alt="separator" width="100%" height="2px" style="margin: 20px 0;">
+>>>>>>> Stashed changes
 </div>
 
 </div>
@@ -229,17 +242,22 @@ This project is built upon several awesome PDF open-source projects:
 
 ## License
 
-PDFlex is released under the [MIT][mit-license] license.
+PDFlex is released under the [MIT][mit-license] license. <br />
 Copyright (c) 2020 to present [PDFlex][pdflex] and contributors.
 
 <div align="left">
   <a href="#top">
-    <img src="docs/assets/button.svg" width="100px" height="100px" alt="Return to Top">
+    <img src="https://raw.githubusercontent.com/eli64s/pdflex/607d295f58914fc81a5b71fd994af90901b6433c/docs/assets/button.svg" width="100px" height="100px" alt="Return to Top">
   </a>
 </div>
 
+<<<<<<< Updated upstream
 <div align="left">
   <img src="https://raw.githubusercontent.com/eli64s/pdflex/d545ac98f5ad59ece892e638a7d3bdee593d8e88/docs/assets/line.svg" alt="thematic-break" width="100%" height="2px" style="margin: 20px 0;">
+=======
+<div align="center">
+  <img src="https://raw.githubusercontent.com/eli64s/pdflex/607d295f58914fc81a5b71fd994af90901b6433c/docs/assets/line.svg" alt="separator" width="100%" height="2px" style="margin: 20px 0;">
+>>>>>>> Stashed changes
 </div>
 
 <!-- REFERENCE LINKS -->
