@@ -1,48 +1,48 @@
-from pathlib import Path
+# from pathlib import Path
 
-import pytest
+# import pytest
 
-from pdflex.extractors.patterns import ExtractionPattern
-from pdflex.modifiers.text_replacement import ReplacementRule
+# from pdflex.extractors.patterns import ExtractionPattern
+# from pdflex.modifiers.text_replacement import ReplacementRule
 
-from .utils import create_test_pdf
+# from .utils import create_test_pdf
 
-# -- Mock Data ---------
-
-
-@pytest.fixture
-def mock_pdf(tmp_path: Path) -> Path:
-    """Fixture to create a temporary PDF file."""
-    pdf_path = tmp_path / "test.pdf"
-    create_test_pdf(pdf_path)
-    return pdf_path
+# # -- Mock Data ---------
 
 
-# -- Extractors ---------
+# @pytest.fixture
+# def mock_pdf(tmp_path: Path) -> Path:
+#     """Fixture to create a temporary PDF file."""
+#     pdf_path = tmp_path / "test.pdf"
+#     create_test_pdf(pdf_path)
+#     return pdf_path
 
 
-@pytest.fixture
-def sample_patterns() -> list[ExtractionPattern]:
-    return [
-        ExtractionPattern(
-            name="name", pattern=r"Name:\s*(.+)", type="string", required=True
-        ),
-        ExtractionPattern(
-            name="amount",
-            pattern=r"\$\s*([\d,]+\.?\d*)",
-            type="currency",
-            multiple=True,
-        ),
-    ]
+# # -- Extractors ---------
 
 
-# -- Modifiers ---------
+# @pytest.fixture
+# def sample_patterns() -> list[ExtractionPattern]:
+#     return [
+#         ExtractionPattern(
+#             name="name", pattern=r"Name:\s*(.+)", type="string", required=True
+#         ),
+#         ExtractionPattern(
+#             name="amount",
+#             pattern=r"\$\s*([\d,]+\.?\d*)",
+#             type="currency",
+#             multiple=True,
+#         ),
+#     ]
 
 
-@pytest.fixture
-def sample_rules() -> list[ReplacementRule]:
-    return [
-        ReplacementRule(
-            pattern=r"(Test\s\d+)", replacement="Replacement", coordinates=(100, 100)
-        )
-    ]
+# # -- Modifiers ---------
+
+
+# @pytest.fixture
+# def sample_rules() -> list[ReplacementRule]:
+#     return [
+#         ReplacementRule(
+#             pattern=r"(Test\s\d+)", replacement="Replacement", coordinates=(100, 100)
+#         )
+#     ]

@@ -48,3 +48,6 @@ src/pdflex/generators/
 src/pdflex/modifiers/
 src/pdflex/settings/
 src/pdflex/config.py
+# tests
+tests/pdflex/extractors/
+tests/pdflex/modifiers/
