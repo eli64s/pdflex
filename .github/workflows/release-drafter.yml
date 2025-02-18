@@ -4,82 +4,19 @@ on:
   push:
     branches:
       - main
-      - master
   pull_request:
-    types: [opened, reopened, synchronize, edited]
-  pull_request_target:
-    types: [opened, reopened, synchronize, edited]
+    types: [ opened, reopened, synchronize ]
 
 permissions:
   contents: read
-  pull-requests: write
 
 jobs:
   update_release_draft:
+    permissions:
+      contents: write
+      pull-requests: write
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        run: |
-          git config --global --add safe.directory $GITHUB_WORKSPACE
-          git checkout ${GITHUB_REF#refs/heads/}
-
-      - name: Generate Release Draft
-        run: |
-          # Initialize release notes sections
-          FEATURES=""
-          FIXES=""
-          DOCS=""
-          CHORES=""
-          
-          # Process pull request or commit information
-          if [[ "${{ github.event_name }}" == "pull_request"* ]]; then
-            TITLE="${{ github.event.pull_request.title }}"
-            BODY="${{ github.event.pull_request.body }}"
-            NUMBER="${{ github.event.pull_request.number }}"
-            AUTHOR="${{ github.event.pull_request.user.login }}"
-            
-            # Categorize based on PR labels
-            if [[ "${{ contains(github.event.pull_request.labels.*.name, 'feature') }}" == "true" ]]; then
-              FEATURES="$FEATURES\n- $TITLE @$AUTHOR (#$NUMBER)"
-            elif [[ "${{ contains(github.event.pull_request.labels.*.name, 'bug') }}" == "true" ]]; then
-              FIXES="$FIXES\n- $TITLE @$AUTHOR (#$NUMBER)"
-            elif [[ "${{ contains(github.event.pull_request.labels.*.name, 'documentation') }}" == "true" ]]; then
-              DOCS="$DOCS\n- $TITLE @$AUTHOR (#$NUMBER)"
-            else
-              CHORES="$CHORES\n- $TITLE @$AUTHOR (#$NUMBER)"
-            fi
-          fi
-          
-          # Generate version number
-          LATEST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "v0.0.0")
-          CURRENT_VERSION=${LATEST_TAG#v}
-          IFS='.' read -r major minor patch <<< "$CURRENT_VERSION"
-          NEW_VERSION="$major.$minor.$((patch + 1))"
-          
-          # Create release notes content
-          RELEASE_NOTES="# Release v$NEW_VERSION
-
-          ## ✨ Features
-          ${FEATURES:-"No new features"}
-
-          ## 🐛 Bug Fixes
-          ${FIXES:-"No bug fixes"}
-
-          ## 📚 Documentation
-          ${DOCS:-"No documentation changes"}
-
-          ## 🔧 Maintenance
-          ${CHORES:-"No maintenance changes"}
-          "
-          
-          # Save release notes
-          echo "$RELEASE_NOTES" > release_draft.md
-          
-          # Create or update release draft using GitHub CLI
-          gh release create "v$NEW_VERSION" \
-            --draft \
-            --title "v$NEW_VERSION" \
-            --notes-file release_draft.md \
-            || gh release edit "v$NEW_VERSION" --notes-file release_draft.md
+      - uses: release-drafter/release-drafter@v5
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
