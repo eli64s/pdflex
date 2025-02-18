@@ -6,7 +6,7 @@ MAKEFLAGS += --warn-undefined-variables
 MAKEFLAGS += --no-builtin-rules
 
 PYPROJECT_TOML := pyproject.toml
-PYPI_VERSION := 0.1.1
+PYPI_VERSION := 0.1.2
 PYTHON_VERSION := 3.11
 TARGET := src/pdflex tests
 TARGET_TEST := tests

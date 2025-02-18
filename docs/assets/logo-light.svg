@@ -1,26 +1,3 @@
-<<<<<<< Updated upstream
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 240">
-    <defs>
-        <linearGradient id="textGradientLight" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="33%" style="stop-color: #FF1493" />
-            <stop offset="67%" style="stop-color:#00F5FF" />
-            <stop offset="100%" style="stop-color:#4B0082" />
-        </linearGradient>
-        <pattern id="gridPatternLight" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-            <rect width="20" height="20" fill="none" />
-            <circle cx="10" cy="10" r="1" fill="#E2E8F0" opacity="0.2" />
-        </pattern>
-    </defs>
-    <!-- Background -->
-    <rect width="1200" height="240" fill="white" />
-    <rect width="1200" height="240" fill="url(#gridPatternLight)" />
-    <!-- Main Text Group -->
-    <g transform="translate(80, 120)">
-        <!-- PDF Text -->
-        <text x="0" y="0" font-family="Arial, sans-serif" font-size="84" font-weight="bold" fill="url(#textGradientLight)">
-            <tspan>pdf</tspan>
-            <tspan fill="#7934C5">FLEX</tspan>
-=======
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200">
     <defs>
         <linearGradient id="textGradientLight" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -64,7 +41,6 @@
         <!-- PDF Text -->
         <text x="0" y="0" font-family="Arial, sans-serif" font-size="84" font-weight="bold" fill="url(#textGradientLight)">
             <tspan>pdFlex</tspan>
->>>>>>> Stashed changes
         </text>
         <!-- Animated underline -->
         <rect x="0" y="10" width="360" height="4" fill="url(#textGradientLight)">
@@ -72,23 +48,6 @@
         </rect>
     </g>
     <!-- Tagline -->
-<<<<<<< Updated upstream
-    <text x="80" y="164" font-family="Arial, sans-serif" font-size="22" fill="#7934C5" opacity="0.8">
-        Python PDF tools.
-    </text>
-    <!-- Sub tagline -->
-    <text x="80" y="190" font-family="Arial, sans-serif" font-size="16" fill="#7934C5" opacity="0.6">
-        Automate | Convert | Extract | Transform
-    </text>
-    <!-- Document Icon -->
-    <g transform="translate(500, 100)">
-        <path d="M20,0 L50,0 L70,20 L70,90 L20,90 Z" fill="none" stroke="url(#textGradientLight)" stroke-width="2">
-            <animate attributeName="stroke-dasharray" from="200" to="0" dur="2s" fill="freeze" />
-        </path>
-        <path d="M50,0 L50,20 L70,20" fill="none" stroke="url(#textGradientLight)" stroke-width="2" />
-    </g>
-</svg>
-=======
     <text x="40" y="144" font-family="Arial, sans-serif" font-size="22" fill="#6B46C1" opacity="0.8">
         Python PDF tools
     </text>
@@ -97,4 +56,3 @@
         Convert | Extract | Merge | Transform
     </text>
 </svg>
->>>>>>> Stashed changes

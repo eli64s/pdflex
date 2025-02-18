@@ -1,19 +1,11 @@
 <div id="top" align="left">
 
 <!-- HEADER -->
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/eli64s/pdflex/1ecee046e6fe585309371b6df12e78845881d3de/docs/assets/logo-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/eli64s/pdflex/1ecee046e6fe585309371b6df12e78845881d3de/docs/assets/logo-light.svg">
-  <img alt="pdflex Logo" src="https://raw.githubusercontent.com/eli64s/pdflex/1ecee046e6fe585309371b6df12e78845881d3de/docs/assets/logo-light.svg" width="100%" style="max-width: 100%;">
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/eli64s/pdflex/blob/main/docs/assets/logo-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/eli64s/pdflex/blob/main/docs/assets/logo-light.svg">
+  <img alt="pdflex Logo" src="https://github.com/eli64s/pdflex/blob/main/docs/assets/logo-light.svg" width="100%" style="max-width: 100%;">
 </picture>
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 
 <!-- BADGES -->
 <div align="left">
@@ -251,13 +243,8 @@ Copyright (c) 2020 to present [PDFlex][pdflex] and contributors.
   </a>
 </div>
 
-<<<<<<< Updated upstream
 <div align="left">
   <img src="https://raw.githubusercontent.com/eli64s/pdflex/d545ac98f5ad59ece892e638a7d3bdee593d8e88/docs/assets/line.svg" alt="thematic-break" width="100%" height="2px" style="margin: 20px 0;">
-=======
-<div align="center">
-  <img src="https://raw.githubusercontent.com/eli64s/pdflex/607d295f58914fc81a5b71fd994af90901b6433c/docs/assets/line.svg" alt="separator" width="100%" height="2px" style="margin: 20px 0;">
->>>>>>> Stashed changes
 </div>
 
 <!-- REFERENCE LINKS -->
