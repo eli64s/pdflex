@@ -2,8 +2,8 @@ from pathlib import Path
 
 import pytest
 
-from pdflex.converters.slides_to_text import extract_text_from_pdf, process_directory
 from pdflex.exceptions import PDFlexError
+from pdflex.slides_to_text import extract_text_from_pdf, process_directory
 
 from ..utils import create_test_pdf
 
