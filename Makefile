@@ -6,7 +6,7 @@ MAKEFLAGS += --warn-undefined-variables
 MAKEFLAGS += --no-builtin-rules
 
 PYPROJECT_TOML := pyproject.toml
-PYPI_VERSION := 0.1.3
+PYPI_VERSION := 0.1.4
 PYTHON_VERSION := 3.11
 TARGET := src/pdflex tests
 TARGET_TEST := tests
@@ -100,7 +100,7 @@ typecheck-pyright: ## Type-check Python files using Pyright
 
 
 RELEASE_FILES ?= .
-RELEASE_MSG   ?= "Release version $(PYPI_VERSION)"
+RELEASE_MSG   ?= "Add pymupdf dependency, release $(PYPI_VERSION)"
 RELEASE_BRANCH ?= main
 TAG_PREFIX    ?= v
 
@@ -110,12 +110,12 @@ ifndef version
 	$(error version parameter is required. Use 'make release version=X.Y.Z')
 endif
 	# make release version=1.2.3 RELEASE_FILES="file1 file2" RELEASE_MSG="Custom release message" RELEASE_BRANCH=develop TAG_PREFIX=release-"
-	@echo "Creating release version $(version)..."
+	@echo "Creating release version $(PYPI_VERSION)..."
 	@git add $(RELEASE_FILES)
 	@git commit -m "$(RELEASE_MSG)"
-	@git tag -a $(TAG_PREFIX)$(version) -m "$(RELEASE_MSG)"
+	@git tag -a $(TAG_PREFIX)$(PYPI_VERSION) -m "$(RELEASE_MSG)"
 	@git push origin $(RELEASE_BRANCH)
-	@git push origin $(TAG_PREFIX)$(version)
+	@git push origin $(TAG_PREFIX)$(PYPI_VERSION)
 
 
 # -- Tests ----------------------------
