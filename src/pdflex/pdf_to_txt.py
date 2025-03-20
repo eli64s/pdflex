@@ -30,7 +30,7 @@ def convert_pdf_to_text(pdf_path: Union[str, Path], masking_words: List[str] = N
                 reader = PdfReader(f)
                 for page in reader.pages:
                     page_text = page.extract_text()
-                    debug(f"Extracted text from page {page.number}: {page_text}")
+                    _log.debug(f"Extracted text from page {page.number}: {page_text}")
                     if page_text.strip():  # Skip blank lines
                         text += page_text + " "
 

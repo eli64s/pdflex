@@ -1,6 +1,6 @@
 [project]
 name = "pdflex"
-version = "0.1.8"
+version = "0.1.9"
 description = "Python tools for PDF automation."
 dynamic = ["readme"]
 keywords = [
