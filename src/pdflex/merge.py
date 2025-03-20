@@ -14,8 +14,6 @@ from typing import List
 
 from pypdf import PdfWriter
 from reportlab.lib.pagesizes import landscape as rl_landscape
-
-# Import ReportLab modules to generate the separator page.
 from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
 

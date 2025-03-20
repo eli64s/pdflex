@@ -6,7 +6,7 @@ MAKEFLAGS += --warn-undefined-variables
 MAKEFLAGS += --no-builtin-rules
 
 PYPROJECT_TOML := pyproject.toml
-PYPI_VERSION := 0.1.7
+PYPI_VERSION := 0.1.8
 PYTHON_VERSION := 3.11
 TARGET := src/pdflex tests
 TARGET_TEST := tests
@@ -123,19 +123,10 @@ endif
 
 .PHONY: test
 test: ## Run test suite using Pytest
-	uv run pytest $(TARGET_TEST) --config-file $(PYPROJECT_TOML)
+	uv run pytest $(TARGET_TEST)
 
 
 # -- Utils ---------------------------
-
-
-.PHONY: convert-slides
-convert-slides: ## Convert slides to PDF
-	@echo -e "\n► Converting slides to PDF..."
-	python \
-		src/pdflex/slides_to_text.py tests/data/slide-deck-math.pdf \
-		--output .pdflex/convert/30-slides-to-text.txt
-
 
 .PHONY: help
 help: ## Display this help
